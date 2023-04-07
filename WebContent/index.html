@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Digital Health Inc.</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="text-center row">
+			<div class="col-lg-12">
+				<div id="content">
+					<h1>Personal Food Log App</h1>
+					<h3>A complete energy intake/expenditure system </h3>
+				</div>
+			</div>
+		</div></div><br>
+	<div class="container">
+		<div class="form-box">
+			<div class="button-box">
+				<div id="btn"></div>
+				<button type="button" class="toggle-btn" onclick="login()">Log In</button>
+				<button type="button" class="toggle-btn" onclick="register()">Register</button>
+			</div>
+			<div class="social-icons">
+			<img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Facebook2_colored_svg-512.png">
+			<img src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Twitter3_colored_svg-512.png">
+			<img src="https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Google-512.png">
+		</div>
+		<form id="login" class="input-group" action="Login" method="post">
+			<input type="text" class="input-field" placeholder="Username" name="username" required>
+			<input type="password" class="input-field" placeholder="Type your password here" name="password" required>
+			<input type="submit" class="submit-btn" value="Login">
+		</form>
+		<form id="register" class="input-group" action="Register" method="post">
+			<input type="text" class="input-field" placeholder="First Name" name="firstname" required>
+			<input type="text" class="input-field" placeholder="Last Name" name="lastname" required>
+			<input type="text" class="input-field" placeholder="Username" name="username" required>
+			<input type="password" class="input-field" placeholder="Type your password here" name="password" required>
+			<input type="submit" class="submit-btn" value="Register">
+		</form>
+		</div>
+
+	</div>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		var x = document.getElementById('login');
+		var y = document.getElementById('register');
+		var z = document.getElementById('btn');
+		function register(){
+			x.style.left = "-400px";
+			y.style.left = "50px";
+			z.style.left = "110px";
+		}
+		function login(){
+			x.style.left = "50px";
+			y.style.left = "450px";
+			z.style.left = "0";
+		}
+	</script>
+</body>
+</html>

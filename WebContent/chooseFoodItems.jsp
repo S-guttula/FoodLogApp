@@ -1,0 +1,105 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Count Your Calories</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		button{
+			padding: 0.8px 15px;
+			margin-left: 95px;
+		}
+	</style>
+</head>
+<body>
+	<%String userName=(String)request.getParameter("username");%>
+	<%String firstName=(String)request.getParameter("firstname");%>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  		<a class="navbar-brand" href="Login1.jsp">Digital Health Inc.</a>
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    	<span class="navbar-toggler-icon"></span>
+  		</button>
+
+  	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    	<ul class="navbar-nav ml-auto">
+    		<li class="nav-item"><a class="nav-link" href="http://localhost:8085/Personal_Food_Log_App/">Log Out</a></li>
+    	</ul>
+  	</div>
+	</nav>
+	<div class="container">
+		<div class="form-box-profile">
+		<h3>Let's calculate your calories</h3>
+		<form id="login" class="input-group-profile" action="CalorieCounter" method="post">
+			<label>Choose the food item: 
+				<select class="input-field" name="foodItem" required>
+					<option value="none">Please choose below...</option>
+					<option value="apple">Apple</option>
+					<option value="avocado">Avocado</option>
+					<option value="banana">Banana</option>
+					<option value="blueberries">Blueberries</option>
+					<option value="orange">Oranges</option>
+					<option value="strawberries">Strawberries</option>
+					<option value="eggs">Eggs</option>
+					<option value="beef">Lean Beef</option>
+					<option value="chickenbreast">Chicken Breasts</option>
+					<option value="lamb">Lamb</option>
+					<option value="almonds">Almonds</option>
+					<option value="chiaseeds">Chia Seeds</option>
+					<option value="coconuts">Coconuts</option>
+					<option value="macdamianuts">Macadamia nuts</option>
+					<option value="walnuts">Walnuts</option>
+					<option value="asparagus">Asparagus</option>
+					<option value="bellpepper">Bell Peppers</option>
+					<option value="brocolli">Brocolli</option>
+					<option value="carrot">Carrots</option>
+					<option value="cauliflower">Cauliflower</option>
+					<option value="cucumber">Cucumber</option>
+					<option value="garlic">Garlic</option>
+					<option value="kale">Kale</option>
+					<option value="onions">Onions</option>
+					<option value="tomato">Tomatoes</option>
+					<option value="salmon">Salmon</option>
+					<option value="sardine">Sardines</option>
+					<option value="shellfish">Shell Fish</option>
+					<option value="shrimp">Shrimp</option>
+					<option value="trout">Trout</option>
+					<option value="tuna">Tuna</option>
+					<option value="brownrice">Brown Rice</option>
+					<option value="oats">Oats</option>
+					<option value="quinoa">Quinoa</option>
+					<option value="ezekeilbread">Ezekeil Bread</option>
+					<option value="homebread">Homemade low-carb breads</option>
+					<option value="greenbeans">Green Beans</option>
+					<option value="kidneybeans">Kidney Beans</option>
+					<option value="lentils">Lentils</option>
+					<option value="peanuts">Peanuts</option>
+					<option value="cheese">Cheese</option>
+					<option value="wholemilk">Whole Milk</option>
+					<option value="yogurt">Yogurt</option>
+					<option value="butter">Butter from grass-fed cows</option>
+					<option value="coconutoil">Coconut Oil</option>
+					<option value="oliveoil">Extra Virgin Olive Oil</option>
+					<option value="potato">Potatoes</option>
+					<option value="spotato">Sweet Potatoes</option>
+					<option value="applecidervinegar">Apple Cider Vinegar</option>
+					<option value="darkchocolate">Dark Chocolate</option>
+				</select>
+			</label>
+			<input type="hidden" name="username" value="<%=userName%>">
+			<input type="hidden" name="firstname" value="<%=firstName%>">
+			<input type="submit" class="submit-btn" value="Calculate"><br>
+			<button type="button" name="back" onclick="history.back()">Go Back</button>
+		</form>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script type="text/javascript"></script>
+</body>
+</html>
